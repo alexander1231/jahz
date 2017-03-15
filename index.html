@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body >
+	<div id="mainDiv" >
+		<div id="content">
+			<div id="code">
+				<span class="comments">Te Amo Feita(￣︶￣)↗ </span><br />
+				<span class="space"/><span class="comments">Tu siempre me haces muy feliz solo contigo quero &nbsp;estar toda la vida.</span><br />
+				<span class="space"/><span class="comments">se que ultimamente nos separa solo la distancia y &nbsp;que a sido dificil para los dos.</span><br />
+				<span class="space"/><span class="comments">imaginar que an pasado ya 4 meses</span><br />
+				<span class="space"/>esto es para ti amor por tu siempre estas ahi y me &nbsp;haces feliz <br />
+				<span class="space"/>quiero que lo hagas por siempre ，<br />
+				<span class="space"/>no quiero nunca pelear contigo por que eres la &nbsp;persona que me hace feliz ，<br />
+				<span class="space"/>solo quiero ser feliz junto a ti (。・・)ノ，<br />
+				<span class="space"/>espero que esta etapa de dolo se supere rapido。<br />
+				<span class="space"/>por que lo unico que deseo es verte y estar &nbsp;contigo，<br />
+				<span class="keyword">Te Amo y tu lo sabes amor ，<br />
+				<span class="space"/>quiero amarte por siempre y que tu lo hagas ，<br />
+				<span class="space"/>y no quiero que sientas esa tristeza porque siempre  &nbsp;te amare，<br />
+				<span class="space"/>Y siempre estare a tu lado y quiero que tu estes ahi &nbsp;conmigo <br /> quiero amarte por toda la vida ♪(＾∀＾●)ﾉ</span> <br />
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Jahzeel, Te Amo~！
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Tu Feito</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2015, 7, 30);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+    
+<audio src="mp3/5.mp3" autoplay="autoplay"></audio>
+</body>
+</html>
